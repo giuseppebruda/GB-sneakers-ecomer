@@ -6,7 +6,7 @@ let productos = [
         {id : 3 , nombre : "Adidas Shark", precio : 50000, imagen : "./img/adidas/adidas shark.jpg" },
         {id : 4 , nombre : "Yeezy 700", precio : 80000, imagen : "./img/adidas/adidas yeezy 700.png" },
         {id : 5 , nombre : "Yeezy 500", precio : 50000, imagen : "./img/adidas/adidas yezzy 500.jpg" },
-        {id : 6 , nombre : " Adidas Adifom", precio : 75000, imagen : "./img/adidas/Zapatillas_adiFOM.jpg" },
+        {id : 6 , nombre : " Adidas Adifom", precio : 75000, imagen : "./img/adidas/adidas-adifom-q-halo-blue-hq4322_1.jpg" },
     //nike
         {id : 7 , nombre : "Nike air jordan retro 6", precio : 80000 , imagen : "./img/nike/air jordan 6.jpg" },
         {id : 8 , nombre : "Nike air more uptempo", precio :75000 , imagen : "./img/nike/nike air more uptempo.jpg" },

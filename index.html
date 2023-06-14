@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./estilos.css/estilos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
     <title>GBsneker</title>
 </head>
 <body>
-<div class=""></div>
 <nav class="nav" id="nav">
-        <button class="open__car" id="openCar"><i class="bi bi-cart4"></i></button>
+
+<!-- Modal -->
+<button class="btn open__card" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" id="openCard"><i class="bi bi-cart4 "></i> <span id="agregados"></span></button>
+
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Productos seleccionados</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <p>Mi carrito</p>
+                    <!-- aca pongo mis productos -->
+                    <div id="miCarrito"></div>
+                    <div>
+                    Total de compra:<p id="precioTotal"></p>
+                    </div>
+                </div>
+                <button class="comprar btn btn-primary">Comprar</button>
+                </div>
 </nav>
 <header class="header">
 <h1 >GB sneaker</h1>
@@ -23,10 +43,9 @@
 <section id="padreProductos" class="padreProductos">
 <!-- padre de los productos -->
 </section>
-<!-- aca va el carrito -->
-<div id="carritoContainer" class="carrito__container"></div>
-<div id="carContainer"></div>
-<script src="./js/product.js"></script>
+
+
+    <script src="./js/product.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
