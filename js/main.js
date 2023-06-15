@@ -34,6 +34,13 @@ const verProductos = () =>{
                 if (item.id === producto.id) {
                     item.cantidad++;
                 }
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: `sumaste un par de ${producto.nombre} `,
+                    showConfirmButton: true,
+                    timer: 1500
+                })
             })
         }else{
             Swal.fire({
@@ -58,8 +65,9 @@ const verProductos = () =>{
     });
 };
 verProductos()
-//funcion para ver el carrito en pantalla 
+//funcion para ver el carrito en pantalla https://github.com/giuseppebruda/terceraPreEntregaGuiseppeBruda
 const verCarrito = () => {
+    miCarrito.innerHTML = ""
     carrito.forEach((productoCarrito) =>{
         let containerCarrito = document.createElement("div");
         containerCarrito.classList.add("card__carrito");
@@ -132,8 +140,9 @@ comprarCarrito.addEventListener("click", () =>{
         title: 'compra finalizada con exito',
         showConfirmButton: false,
         timer: 1500
-      })
+    })
     verCarrito();
+    costos()
     localStorage.clear();
 }
 )
@@ -142,8 +151,16 @@ function costos (){
     agregados.innerHTML =carrito.reduce((acc,iten)=> acc + (iten.precio * iten.cantidad),0)
 }
 
+// aca dejo el llamado a la poke api con el fin de ver los objetos por consola para su posterior uso 
+// const callApi = () => {
+//     fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+//     .then(res => res.json())
+//     .then(data => 
+//         console.log(data);)
+//     .catch(e => console.error(e) )
+// }
 
-
+// callApi()
 
 
 
