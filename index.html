@@ -16,9 +16,8 @@
 </head>
 <body>
 <nav class="nav" id="nav">
-
 <!-- Modal -->
-<button class="btn open__card" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" id="openCard"><i class="bi bi-cart4 "></i> <span id="agregados"></span></button>
+<button class="btn open__car" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" id="openCar"><i class="bi bi-cart4 "></i> <span class="agregados" id="agregados"></span></button>
 
                 <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
                 <div class="offcanvas-header">
@@ -26,16 +25,15 @@
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <p>Mi carrito</p>
                     <!-- aca pongo mis productos -->
-                    <div id="miCarrito"></div>
+                    <div class="carrito" id="miCarrito"></div>
                     <div>
                     Total de compra:<p id="precioTotal"></p>
                     </div>
                 </div>
-                <button class="comprar btn btn-primary">Comprar</button>
+                <button id="comprar" class="comprar btn btn-primary">Comprar</button>
                 </div>
-</nav>
+</nav> 
 <header class="header">
 <h1 >GB sneaker</h1>
 <h3 >puro flow en tus zapas</h3>
@@ -45,6 +43,10 @@
 </section>
 
 
+<footer class="footer">
+    <p>desarrollado por giuseppe bruda The Word Is Yours</p>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/product.js"></script>
     <script src="./js/main.js"></script>
 </body>
