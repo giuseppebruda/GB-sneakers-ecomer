@@ -5,6 +5,8 @@ let precioTotal = document.getElementById("precioTotal")
 let agregados = document.getElementById("agregados")
 //primero crear el array para generar el carrito
 let carrito = [];
+//cargar carrito desde el localstorage
+carrito = (localStorage.getItem('carrito')) ? JSON.parse(localStorage.getItem('carrito')) : [];
 //funcion actualizar carrito para actualizar el storage y monitorear por consola que todo funcione
 function actualizarCarrito() {
     localStorage.setItem("carrito", JSON.stringify(carrito))
@@ -65,7 +67,7 @@ const verProductos = () =>{
     });
 };
 verProductos()
-//funcion para ver el carrito en pantalla https://github.com/giuseppebruda/terceraPreEntregaGuiseppeBruda
+//funcion para ver el carrito en pantalla 
 const verCarrito = () => {
     miCarrito.innerHTML = ""
     carrito.forEach((productoCarrito) =>{
@@ -128,7 +130,7 @@ const restarProducto = (id) => {
 //funcion eliminar 
 const eliminarDelCarrito = (id) => {
     carrito = carrito.filter((productoCarrito) => productoCarrito.id !== id)
-    
+    actualizarCarrito()
     verCarrito()
 }
 let comprarCarrito = document.getElementById("comprar")
